@@ -12,8 +12,9 @@ export class UserService {
     @InjectRepository(User)
     private repository: Repository<User>,
   ) {}
+  
   create(dto: CreateUserDto) {
-    return this.repository.create(dto);
+    return this.repository.save(dto);
   }
 
   findAll() {

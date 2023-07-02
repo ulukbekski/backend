@@ -12,6 +12,6 @@ export class User {
   @IsEmail()
   email: string;
 
-  @Column()
-  password: string;
+  @Column({ nullable: true })
+  password?: string;
 }
